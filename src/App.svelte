@@ -29,14 +29,14 @@
     /* Add your CSS styles here */
     .container {
         position: absolute;
-        top: 100px; /* Adjust the top position as per your requirement */
-        left: calc((1536px - 500px) / 2 + 280px); /* Adjust the left position as per your requirement */
+        top: 85px; /* Adjust the top position as per your requirement */
+        left: calc((1536px - 500px) / 2 + 270px); /* Adjust the left position as per your requirement */
         width: 270px; /* Increase width */
         height: 550px; /* Increase height */
         background-color: #FAEBD7; /* Set light brown background color */
-        border: 16px solid #8B4513; /* Set dark brown border */
+        border: 16px solid #63310e; /* Set dark brown border */
         padding: 20px;
-        border-radius: 15px;
+        border-radius: 5px;
         /* overflow-y: auto; Enable scrolling if content overflows */
         z-index: 1; /* Ensure the container is above other elements */
         pointer-events: auto; /* Enable pointer events for the container */
@@ -59,6 +59,7 @@
         align-items: center;
         margin-left: 15px;
         border: 4px solid #8B4513; /* Set dark brown border */
+        font-family: Chalkboard, sans-serif;
     }
 
     p {
@@ -74,6 +75,7 @@
         border: 4px solid #8B4513; /* Set dark brown border */
         border-radius: 10px;
         cursor: pointer;
+        font-family: Chalkboard, sans-serif;
     }
 
     button:hover {

@@ -64,6 +64,7 @@
     border-radius: 10px;
     margin: 2px;
     cursor: pointer;
+    font-family: Chalkboard, sans-serif;
   }
   button:hover {
         background-color: green;
