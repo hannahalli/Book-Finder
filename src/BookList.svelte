@@ -55,7 +55,7 @@
   }
 
   .book-button {
-    font-size: 20px;
+    font-size: 18px;
     width: 260px; /* Set width to auto */
     padding: 10px 20px; /* Add padding for height adjustment */
     background-color: darkgreen;
