@@ -35,17 +35,6 @@
   }
 </script>
 
-{#if showBookList}
-  <BookList {selectedCategory} on:back={handleBackClick}/> <!-- Render BookList component when showBookList is true -->
-{:else}
-  <div>
-    <h2>What Do You Want To Read?</h2>
-    {#each categories as groupName}
-      <button class="category-button" on:click={() => handleCategoryClick(groupName)}>{groupName}</button>
-    {/each}
-  </div>
-{/if}
-
 <style>
   /* Add your CSS styles here */
   h2 {
@@ -69,3 +58,16 @@
         background-color: green;
     }
 </style>
+
+
+{#if showBookList}
+  <BookList {selectedCategory} on:back={handleBackClick}/> <!-- Render BookList component when showBookList is true -->
+{:else}
+  <div>
+    <h2>What Do You Want To Read?</h2>
+    {#each categories as groupName}
+      <button class="category-button" on:click={() => handleCategoryClick(groupName)}>{groupName}</button>
+    {/each}
+  </div>
+{/if}
+

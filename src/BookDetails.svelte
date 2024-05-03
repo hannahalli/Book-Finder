@@ -46,27 +46,6 @@
   }
 </script>
 
-{#if locationInfo}
-  <Location bookTitle={bookTitle} location={locationInfo.location} />
-{:else}
-  {#if bookInfo}
-    <h2>{bookInfo.Title}</h2>
-    {#if bookInfo.Author}
-      <p>Author: {bookInfo.Author}</p>
-    {/if}
-    {#if bookInfo['Edition Date']}
-      <p>Publication Date: {bookInfo['Edition Date']}</p>
-    {/if}
-    {#if bookInfo.Publisher}
-      <p>Publisher: {bookInfo.Publisher}</p>
-    {/if}
-    {#if bookInfo.Description}
-      <p class="description">Description: {bookInfo.Description}</p>
-    {/if}
-    <button on:click={handleFindMe}>Find Me!</button>
-  {/if}
-{/if}
-
 <style>
   h2 {
     margin-top: 0px;
@@ -102,3 +81,24 @@
   }
 
 </style>
+
+{#if locationInfo}
+  <Location bookTitle={bookTitle} location={locationInfo.location} />
+{:else}
+  {#if bookInfo}
+    <h2>{bookInfo.Title}</h2>
+    {#if bookInfo.Author}
+      <p>Author: {bookInfo.Author}</p>
+    {/if}
+    {#if bookInfo['Edition Date']}
+      <p>Publication Date: {bookInfo['Edition Date']}</p>
+    {/if}
+    {#if bookInfo.Publisher}
+      <p>Publisher: {bookInfo.Publisher}</p>
+    {/if}
+    {#if bookInfo.Description}
+      <p class="description">Description: {bookInfo.Description}</p>
+    {/if}
+    <button on:click={handleFindMe}>Find Me!</button>
+  {/if}
+{/if}
