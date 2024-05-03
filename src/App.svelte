@@ -29,12 +29,12 @@
     /* Add your CSS styles here */
     .container {
         position: absolute;
-        top: 75px; /* Adjust the top position as per your requirement */
-        left: calc((1536px - 500px) / 2 + 400px); /* Adjust the left position as per your requirement */
-        width: 260px; /* Increase width */
+        top: 100px; /* Adjust the top position as per your requirement */
+        left: calc((1536px - 500px) / 2 + 280px); /* Adjust the left position as per your requirement */
+        width: 270px; /* Increase width */
         height: 550px; /* Increase height */
         background-color: #FAEBD7; /* Set light brown background color */
-        border: 8px solid #8B4513; /* Set dark brown border */
+        border: 16px solid #8B4513; /* Set dark brown border */
         padding: 20px;
         border-radius: 15px;
         /* overflow-y: auto; Enable scrolling if content overflows */
@@ -44,7 +44,6 @@
         color: #8B4513; /* Set text color to dark brown */
         font-family: Chalkboard, sans-serif; /* Set font to Chalkduster */
     }
-
     h1 {
         margin-top: 50px; /* Lower the margin top */
         font-size: 30px;
