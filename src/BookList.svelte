@@ -35,6 +35,17 @@
   });
 </script>
 
+{#if !showBookDetails}
+<div>
+  <h2>Pick a Book to Learn More!</h2>
+  {#each books as bookTitle}
+    <button class="book-button" on:click={() => handleClick(bookTitle)}>{bookTitle}</button>
+  {/each}
+</div>
+{:else}
+<BookDetails bookTitle="{selectedBookTitle}" />
+{/if}
+
 <style>
   /* Add your CSS styles here */
   h2 {
@@ -45,7 +56,7 @@
 
   .book-button {
     font-size: 18px;
-    width: 250px; /* Set width to auto */
+    width: 240px; /* Set width to auto */
     padding: 10px 20px; /* Add padding for height adjustment */
     background-color: darkgreen;
     color: white;
@@ -59,14 +70,3 @@
     }
 
 </style>
-
-{#if !showBookDetails}
-<div>
-  <h2>Pick a Book to Learn More!</h2>
-  {#each books as bookTitle}
-    <button class="book-button" on:click={() => handleClick(bookTitle)}>{bookTitle}</button>
-  {/each}
-</div>
-{:else}
-<BookDetails bookTitle="{selectedBookTitle}" />
-{/if}

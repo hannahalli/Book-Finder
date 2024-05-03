@@ -8,10 +8,39 @@
         click = false;
     }
 </script>
+
+{#if click}
+<h2>{bookTitle}</h2>
+<p>Location: {location}</p>
+{#if location}
+    {#if location === 'Clock Tower'}
+        <p>Look to the right to find the book you seek!</p>
+        <div class="arrow-right">
+            <img src='./arrow.png' alt="Right Arrow" class="arrow-img">
+        </div>
+    {:else if location === 'Book Cart'}
+        <p>Look down and unearth the book you seek!</p>
+        <div class="arrow-down">
+            <img src='./arrow.png' alt="Down Arrow" class="arrow-img">
+        </div>
+    {:else if location === 'Wooden Crates'}
+        <p>Cast your gaze to the left and discover the book you seek!</p>
+        <div class="arrow-left">
+            <img src='./arrow.png' alt="Left Arrow" class="arrow-img">
+        </div>
+    {:else}
+        <p>No specific instruction available.</p>
+    {/if}
+    <button on:click={handleClick}>Find Another Book!</button>
+{/if}
+{:else}
+    <CategoryList />
+{/if}
+
 <style>
     h2 {
         margin-top: 0px;
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 10px;
     }
 
@@ -72,33 +101,4 @@
         background-color: green;
     }
 </style>
-
-
-{#if click}
-<h2>{bookTitle}</h2>
-<p>Location: {location}</p>
-{#if location}
-    {#if location === 'Clock Tower'}
-        <p>Look to the right to find the book you seek!</p>
-        <div class="arrow-right">
-            <img src='./arrow.png' alt="Right Arrow" class="arrow-img">
-        </div>
-    {:else if location === 'Book Cart'}
-        <p>Look down and unearth the book you seek!</p>
-        <div class="arrow-down">
-            <img src='./arrow.png' alt="Down Arrow" class="arrow-img">
-        </div>
-    {:else if location === 'Wooden Crates'}
-        <p>Cast your gaze to the left and discover the book you seek!</p>
-        <div class="arrow-left">
-            <img src='./arrow.png' alt="Left Arrow" class="arrow-img">
-        </div>
-    {:else}
-        <p>No specific instruction available.</p>
-    {/if}
-    <button on:click={handleClick}>Find Another Book!</button>
-{/if}
-{:else}
-    <CategoryList />
-{/if}
 

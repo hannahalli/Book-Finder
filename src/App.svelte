@@ -10,6 +10,21 @@
         currentComponent = CategoryList;
     };
 </script>
+
+<div class="container">
+    {#if !currentComponent}
+        <h1>Welcome to the Book Finder!</h1>
+        <div class="paragraph-container">
+            <p>There are so many wonderful stories to read! Look through the different categories to find a book.</p>
+        </div>
+        <button on:click={toggleCategories}>Find a Book!</button>
+    {/if}
+
+    {#if currentComponent}
+        <svelte:component this={currentComponent}  />
+    {/if}
+</div>
+
 <style>
     /* Add your CSS styles here */
     .container {
@@ -66,20 +81,4 @@
         background-color: green;
     }
 </style>
-
-
-
-<div class="container">
-    {#if !currentComponent}
-        <h1>Welcome to the Book Finder!</h1>
-        <div class="paragraph-container">
-            <p>There are so many wonderful stories to read! Look through the different categories to find a book.</p>
-        </div>
-        <button on:click={toggleCategories}>Find a Book!</button>
-    {/if}
-
-    {#if currentComponent}
-        <svelte:component this={currentComponent}  />
-    {/if}
-</div>
 
